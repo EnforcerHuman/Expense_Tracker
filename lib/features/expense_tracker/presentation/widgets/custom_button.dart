@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:moneymanagementapp/core/styles/app_colors.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
@@ -13,10 +14,10 @@ class CustomButton extends StatelessWidget {
     super.key,
     required this.text,
     required this.onPressed,
-    this.color = Colors.green, // Default color
-    this.textColor = Colors.black, // Default text color
-    this.padding = const EdgeInsets.symmetric(vertical: 15), // Default padding
-    this.borderRadius = 25.0, // Default border radius
+    this.color = AppColors.accentColor,
+    this.textColor = AppColors.primaryTextColor,
+    this.padding = const EdgeInsets.symmetric(vertical: 15),
+    this.borderRadius = 25.0,
   });
 
   @override

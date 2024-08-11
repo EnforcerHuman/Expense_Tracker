@@ -1,14 +1,13 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:moneymanagementapp/core/styles/app_colors.dart';
 import 'package:moneymanagementapp/features/expense_tracker/data/category_repository.dart';
 import 'package:moneymanagementapp/features/expense_tracker/data/model/category_model.dart';
 import 'package:moneymanagementapp/features/expense_tracker/presentation/bloc/categories_bloc/get_categories_bloc.dart';
 import 'package:moneymanagementapp/features/expense_tracker/presentation/widgets/custom_button.dart';
 import 'package:moneymanagementapp/features/expense_tracker/presentation/widgets/custom_input_field.dart';
 import 'package:moneymanagementapp/features/expense_tracker/presentation/widgets/header.dart';
-
-// Main widget
 
 class AddCategory extends StatelessWidget {
   const AddCategory({super.key});
@@ -41,21 +40,16 @@ class AddCategory extends StatelessWidget {
                   CategoryRepository categoryRepository = CategoryRepository();
 
                   if (categoryController.text.isEmpty) {
+                    // Show error message if category is empty
                     ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
+                      const SnackBar(
                         content: const Text(
                             'Please enter a catergory before saving'),
-                        duration:
-                            const Duration(seconds: 2), // Snackbar duration
-                        action: SnackBarAction(
-                          label: 'Undo',
-                          onPressed: () {
-                            // Handle the Undo action
-                          },
-                        ),
+                        duration: const Duration(seconds: 2),
                       ),
                     );
                   } else {
+                    // Create and save new category
                     final category = CategoryModel(
                         id: Random().nextInt(10000).toString(),
                         name: categoryController.text,
@@ -64,17 +58,12 @@ class AddCategory extends StatelessWidget {
                     categoryRepository.getCategories();
                     categoryController.clear();
                     context.read<CategoriesBloc>().add(GetCategories());
+
+                    // Show success message
                     ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        content: const Text('New Category Successfully added'),
-                        duration:
-                            const Duration(seconds: 2), // Snackbar duration
-                        action: SnackBarAction(
-                          label: 'Undo',
-                          onPressed: () {
-                            // Handle the Undo action
-                          },
-                        ),
+                      const SnackBar(
+                        content: Text('New Category Successfully added'),
+                        duration: Duration(seconds: 2),
                       ),
                     );
                   }
@@ -86,7 +75,7 @@ class AddCategory extends StatelessWidget {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                color: Colors.blueGrey,
+                color: AppColors.primaryColor,
               ),
             ],
           ),

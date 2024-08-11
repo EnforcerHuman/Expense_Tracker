@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:moneymanagementapp/core/styles/app_colors.dart';
+import 'package:moneymanagementapp/core/styles/app_text_styles.dart';
 
 class CategoryCard extends StatelessWidget {
   final int index;
@@ -23,17 +25,17 @@ class CategoryCard extends StatelessWidget {
             onPressed: onDelete,
             icon: Icons.delete,
             label: 'delete',
-            backgroundColor: Colors.black,
+            backgroundColor: AppColors.backgroundColor,
           ),
         ]),
         child: Card(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15.0),
             ),
-            color: Colors.black,
+            color: AppColors.backgroundColor,
             child: ListTile(
               leading: CircleAvatar(
-                backgroundColor: Colors.black,
+                backgroundColor: AppColors.backgroundColor,
                 child: Text(
                   (index + 1).toString(),
                   textAlign: TextAlign.center,
@@ -47,13 +49,7 @@ class CategoryCard extends StatelessWidget {
                   Row(
                     children: [
                       const SizedBox(width: 15),
-                      Text(
-                        name,
-                        style: GoogleFonts.poppins(
-                            color: Colors.white,
-                            fontSize: 23,
-                            fontWeight: FontWeight.w200),
-                      ),
+                      Text(name, style: AppTextStyles.bodyText3),
                     ],
                   ),
                   const SizedBox(

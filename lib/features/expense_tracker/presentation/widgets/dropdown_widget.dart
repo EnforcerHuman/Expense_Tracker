@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:moneymanagementapp/core/styles/app_text_styles.dart';
 import 'package:moneymanagementapp/features/expense_tracker/presentation/bloc/categories_bloc/get_categories_bloc.dart';
 
 class DropdownWidget extends StatelessWidget {
@@ -29,7 +30,7 @@ class DropdownWidget extends StatelessWidget {
                 value: e.name,
                 child: Text(
                   e.name,
-                  style: GoogleFonts.poppins(color: Colors.green, fontSize: 23),
+                  style: AppTextStyles.bodyText3,
                 ),
               );
             }).toList(),

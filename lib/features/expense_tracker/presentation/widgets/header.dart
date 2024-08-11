@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:moneymanagementapp/core/styles/app_text_styles.dart';
 
 class Header extends StatelessWidget {
   final String firstWord;
@@ -12,11 +12,7 @@ class Header extends StatelessWidget {
       padding: const EdgeInsets.only(right: 20),
       child: Text(
         '$firstWord\n $secondWord',
-        style: GoogleFonts.poppins(
-          color: Colors.green,
-          fontWeight: FontWeight.bold,
-          fontSize: 35,
-        ),
+        style: AppTextStyles.headline1,
         textAlign: TextAlign.center,
       ),
     );
