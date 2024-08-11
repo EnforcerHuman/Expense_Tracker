@@ -1,16 +1,17 @@
-# moneymanagementapp
+# Personal Expense Tracker
 
-A new Flutter project.
+## README
 
-## Getting Started
+### Overview
+This Personal Expense Tracker is a Flutter-based mobile application designed to help users manage and track their personal expenses. It features a clean architecture, robust state management, and an intuitive user interface.
 
-This project is a starting point for a Flutter application.
+### Features
+- Add, view, edit, and delete expenses
+- Expense summaries with pie chart visualization
+- Daily reminder notifications
+- Data persistence using local storage
+- Responsive and user-friendly interface
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Setup Instructions
+1. Ensure you have Flutter installed on your machine.
+2. Clone this repository:
