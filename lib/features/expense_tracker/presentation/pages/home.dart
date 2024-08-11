@@ -6,9 +6,8 @@ import 'package:moneymanagementapp/features/expense_tracker/presentation/bloc/bo
 import 'package:moneymanagementapp/features/expense_tracker/presentation/pages/home_screen.dart';
 import 'package:moneymanagementapp/features/expense_tracker/presentation/pages/pie_chart_screen.dart';
 import 'package:moneymanagementapp/features/expense_tracker/presentation/widgets/bottom_nav.dart';
-import 'package:moneymanagementapp/features/transaction/add_transaction.dart';
-import 'package:moneymanagementapp/features/transaction/category_list.dart';
-import 'package:moneymanagementapp/features/transaction/new_transaction.dart';
+import 'package:moneymanagementapp/features/expense_tracker/presentation/pages/category_list_screen.dart';
+import 'package:moneymanagementapp/features/expense_tracker/presentation/pages/new_transaction.dart';
 
 class Home extends StatelessWidget {
   Home({super.key});
@@ -17,9 +16,9 @@ class Home extends StatelessWidget {
   final _pages = [
     const HomeScreen(),
     const PieChartForIncomeAndExpense(),
-    const TransactionList(),
+    // const TransactionList(),
     const AddTransaction(),
-    const CategoryList()
+    CategoryListScreen()
   ];
   @override
   Widget build(BuildContext context) {
@@ -48,13 +47,7 @@ class Home extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 IconButton(
-                    onPressed: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //       builder: (context) => const AppSettings()),
-                      // );
-                    },
+                    onPressed: () {},
                     icon: Icon(
                       Icons.settings,
                       color: Colors.grey.shade700,

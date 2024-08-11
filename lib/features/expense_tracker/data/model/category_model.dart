@@ -12,28 +12,19 @@ class CategoryModel extends HiveObject {
   final String name;
 
   @HiveField(2)
-  final String description;
-
-  @HiveField(3)
   final String type;
-  @HiveField(4)
-  final String icon;
 
   CategoryModel({
     required this.id,
     required this.name,
-    required this.description,
     required this.type,
-    required this.icon,
   });
 
   Category toEntity() {
     return Category(
       id: id,
       name: name,
-      description: description,
       type: type,
-      icon: icon,
     );
   }
 
@@ -42,14 +33,12 @@ class CategoryModel extends HiveObject {
     return CategoryModel(
       id: category.id,
       name: category.name,
-      description: category.description,
       type: category.type,
-      icon: category.icon,
     );
   }
 
   @override
   String toString() {
-    return 'CategoryModel{id: $id, name: $name, description: $description, type: $type, icon: $icon}';
+    return 'CategoryModel{id: $id, name: $name,  type: $type,}';
   }
 }

@@ -13,24 +13,20 @@ class BottomNav extends StatelessWidget {
       selectedItemColor: Colors.green,
       unselectedItemColor: Colors.grey,
       onTap: onTap,
-      items: <BottomNavigationBarItem>[
-        const BottomNavigationBarItem(
+      items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
           icon: Icon(Icons.home),
           label: 'Home',
         ),
-        const BottomNavigationBarItem(
+        BottomNavigationBarItem(
           icon: Icon(Icons.bar_chart_rounded),
           label: 'chart',
         ),
-        const BottomNavigationBarItem(
-          icon: Icon(Icons.list),
-          label: 'translations',
-        ),
         BottomNavigationBarItem(
-          icon: const Icon(Icons.add),
+          icon: Icon(Icons.add),
           label: 'Add',
         ),
-        const BottomNavigationBarItem(
+        BottomNavigationBarItem(
           icon: Icon(Icons.category),
           label: 'category',
         ),

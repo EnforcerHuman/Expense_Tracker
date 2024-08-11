@@ -2,16 +2,11 @@ import 'package:moneymanagementapp/features/expense_tracker/domain/entities/expe
 
 class ExpenseSummaryModel extends ExpenseSummary {
   ExpenseSummaryModel({
-    required DateTime startDate,
-    required DateTime endDate,
-    required Map<String, double> categoryTotals,
-    required double totalAmount,
-  }) : super(
-          startDate: startDate,
-          endDate: endDate,
-          categoryTotals: categoryTotals,
-          totalAmount: totalAmount,
-        );
+    required super.startDate,
+    required super.endDate,
+    required super.categoryTotals,
+    required super.totalAmount,
+  });
 
   factory ExpenseSummaryModel.fromJson(Map<String, dynamic> json) {
     return ExpenseSummaryModel(
